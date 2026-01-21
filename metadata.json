@@ -1,0 +1,7 @@
+{
+  "name": "Fieldmat.e ",
+  "description": "Innovative aggregator for sports stadiums and fields in Tashkent. Features AI-powered search, real-time booking, and local payment integration.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
