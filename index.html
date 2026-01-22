@@ -1,52 +1,106 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fieldmat.e - Спортивные площадки Ташкента</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
     <style>
       body {
-        font-family: 'Inter', sans-serif;
-        background-color: #F5F5F0;
+        font-family: "Inter", sans-serif;
+        background-color: #f5f5f0;
         margin: 0;
         overflow-x: hidden;
       }
-      .bg-merino { background-color: #F5F5F0; }
-      .bg-pale-olive { background-color: #A2C579; }
-      .bg-drab-green { background-color: #4E6E41; }
-      .bg-lunar-green { background-color: #2D4636; }
-      .text-lunar-green { color: #2D4636; }
-      .border-pale-olive { border-color: #A2C579; }
-      
+      .bg-merino {
+        background-color: #f5f5f0;
+      }
+      .bg-pale-olive {
+        background-color: #a2c579;
+      }
+      .bg-drab-green {
+        background-color: #4e6e41;
+      }
+      .bg-lunar-green {
+        background-color: #2d4636;
+      }
+      .text-lunar-green {
+        color: #2d4636;
+      }
+      .border-pale-olive {
+        border-color: #a2c579;
+      }
+
       @keyframes logo-zoom {
-        0% { transform: scale(0.9); opacity: 0.5; }
-        50% { transform: scale(1.05); opacity: 1; }
-        100% { transform: scale(1); opacity: 1; }
+        0% {
+          transform: scale(0.9);
+          opacity: 0.5;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
       }
       .animate-logo-bounce {
         animation: logo-zoom 1.5s ease-out forwards;
       }
+
+      div.popup._type_normal._position_bottom {
+        display: none;
+      }
+
+      @keyframes iosNotificationSlide {
+        0% {
+          opacity: 0;
+          transform: translate(-50%, -28px) scale(0.98);
+        }
+        60% {
+          opacity: 1;
+          transform: translate(-50%, 6px) scale(1);
+        }
+        100% {
+          opacity: 1;
+          transform: translate(-50%, 0px) scale(1);
+        }
+      }
+
+      .ios-notification-slide {
+        animation: iosNotificationSlide 700ms cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: transform, opacity;
+      }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+          "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+          "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+          "react/": "https://esm.sh/react@^19.2.3/",
+          "react": "https://esm.sh/react@^19.2.3"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
   <body>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
