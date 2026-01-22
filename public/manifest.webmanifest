@@ -1,7 +1,7 @@
 {
-  "name": "My App",
-  "short_name": "MyApp",
-  "description": "My PWA app",
+  "name": "Fieldmat.e",
+  "short_name": "Fieldmat.e",
+  "description": "stadions find",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
