@@ -25,9 +25,9 @@ export default defineConfig(({ mode }) => {
           "icons/pwa-512x512-maskable.png"
         ],
         manifest: {
-          name: "My App",
-          short_name: "MyApp",
-          description: "My PWA app",
+          name: "Fieldmat.e",
+          short_name: "Fieldmat.e",
+          description: "stadion search",
           theme_color: "#ffffff",
           background_color: "#ffffff",
           display: "standalone",
